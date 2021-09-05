@@ -1,0 +1,63 @@
+ <!-- 1] Header ,equal, columns, and footer (using Flexible , using grid)*/ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <!-- <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <style>
+     *{
+         box-sizing: border-box;
+     }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .header{
+         grid-area: header;
+         background-color: #f1f1f1;
+         padding: 30px;
+         text-align: center;
+         font-size: 35px;
+    }
+    
+    .row{
+        display: -webkit-flex;
+        display: flex;
+    }
+    .column{
+        -ms-flex: 1;
+        flex: 1;
+        padding: 1;
+        height: 300px;
+
+    }
+    .footer{
+         grid-area: Footer;
+         background-color: #f1f1f1;
+         padding: 10px;
+         text-align: center;
+    }
+    @media (max-width:600px){
+    .row{
+        flex-direction: column;
+
+    }
+}
+ 
+ </style>
+     <title>Document</title>
+ </head>
+ <body>
+     <!-- <div class="grid-container"> -->
+     <div class="header"><h2>Header</h2>  </div>
+     <div class="row">
+     <div class="column" style="background-color:antiquewhite;">column </div>
+     <div class="column" style="background-color:rgb(189, 168, 141);"> Column</div>
+     <div class="column" style="background-color:rgb(141, 125, 104);"> Column</div>
+    </div>
+     <div class="footer">
+        <p>Footer</p>
+    </div>
+     </div>
+ </body>
+ </html>

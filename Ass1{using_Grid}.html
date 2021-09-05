@@ -1,0 +1,69 @@
+ <!-- 1] Header ,equal, columns, and footer ( using grid)*/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+   body{
+       font-family: Arial, Helvetica, sans-serif;
+   }
+   .header{
+        grid-area: header;
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+   }
+   .grid-container{
+       display: grid;
+       grid-template-areas: 'header header header heder' 'left left middle right right' 'footr footer footer footer footer';
+
+   }
+
+   .left,.middle,.right{
+       padding: 10px;
+       height: 300px;
+   }
+   .left{ 
+       grid-area: left;
+   }
+   .middle{
+       grid-area: middle;
+   }
+   .right{
+       grid-area: right;
+   }
+   .footer{
+        grid-area: Footer;
+        background-color: #f1f1f1;
+        padding: 10px;
+        text-align: center;
+   }
+   @media(max-width:600px){
+    .grid-container{
+       display: grid;
+       grid-template-areas: 'header header header heder' 'left left middle right right' 'footr footer footer footer footer';
+
+   }
+   }
+
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+    <div class="header"><h2>Header</h2>  </div>
+    <div class="left" style="background-color:antiquewhite;">Column </div>
+    <div class="middle" style="background-color:rgb(189, 168, 141);"> Column</div>
+    <div class="right" style="background-color:rgb(141, 125, 104);"> Column</div>
+   <div class="footer">
+       <p>Footer</p>
+   </div>
+    </div>
+</body>
+</html>
